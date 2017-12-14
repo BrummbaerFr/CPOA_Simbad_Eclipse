@@ -14,7 +14,7 @@ public class MyRobot extends Agent {
 
 	public MyRobot(Vector3d position, String name) {
 		super(position, name);
-		//sonars = RobotFactory.addSonarBeltSensor(this, 8);
+		sonars = RobotFactory.addSonarBeltSensor(this, 8);
 	}
 
 	public void initBehavior() {
@@ -35,7 +35,7 @@ public class MyRobot extends Agent {
 		if ((getCounter() % 100) == 0)
 			this.setRotationalVelocity(Math.PI / 2 * (0.5 - Math.random()));
 
-		/*if (sonars.oneHasHit()) {
+		if (sonars.oneHasHit()) {
 			double left = sonars.getFrontLeftQuadrantMeasurement();
 			double right = sonars.getFrontRightQuadrantMeasurement();
 			double front = sonars.getFrontQuadrantMeasurement();
@@ -49,7 +49,7 @@ public class MyRobot extends Agent {
 		if (this.collisionDetected()) {
 			setTranslationalVelocity(-1.0);
 			setRotationalVelocity(0.5);
-		}*/
+		}
 	}
 
 }

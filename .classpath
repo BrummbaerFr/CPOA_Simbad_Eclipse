@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="/home/etudiant/br160984/Documents/Cours_IUT/S3/M3105/TP/CPOA_Simbad_Eclipse/lib/j3d-1_6_0-pre1-1011070159-linux-amd64/lib/amd64"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="/home/etudiant/br160984/Documents/Cours_IUT/S3/M3105/TP/Simbad/j3d-1_6_0-pre1-1011070159-linux-amd64/lib/amd64"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/etudiant/br160984/Documents/Cours_IUT/S3/M3105/TP/CPOA_Simbad_Eclipse/lib/j3d-1_6_0-pre1-1011070159-linux-amd64/lib/ext/j3dcore.jar"/>
+	<classpathentry kind="lib" path="/home/etudiant/br160984/Documents/Cours_IUT/S3/M3105/TP/CPOA_Simbad_Eclipse/lib/j3d-1_6_0-pre1-1011070159-linux-amd64/lib/ext/j3dutils.jar"/>
+	<classpathentry kind="lib" path="/home/etudiant/br160984/Documents/Cours_IUT/S3/M3105/TP/CPOA_Simbad_Eclipse/lib/j3d-1_6_0-pre1-1011070159-linux-amd64/lib/ext/vecmath.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

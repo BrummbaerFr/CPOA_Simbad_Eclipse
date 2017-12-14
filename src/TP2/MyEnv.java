@@ -62,10 +62,10 @@ public class MyEnv extends EnvironmentDescription {
 			this.add(a);
 		
 		this.setUsePhysics(true);
-		this.add(new AgentBalle(new Vector3d(0.0, 0, 0.0), "balle", new Color3f(), 1.0f,0.05f));
-		this.add(new AgentBalle(new Vector3d(-7.0, 0.0, 0.0), "balle", new Color3f(), 1.0f,0.05f));
-		this.add(new AgentBalle(new Vector3d(-3.0, 0.0, 0.0), "balle", new Color3f(), 1.0f,0.05f));
-		this.add(new AgentBalle(new Vector3d(7.0, 0.0, 0.0), "balle", new Color3f(), 1.0f,0.05f));
+		this.add(new AgentBalle(new Vector3d(0.0, 0, 0.0), "balle", new Color3f(), 0.3f,0.05f));
+		this.add(new AgentBalle(new Vector3d(-7.0, 0.0, 0.0), "balle", new Color3f(), 0.3f,0.05f));
+		this.add(new AgentBalle(new Vector3d(-3.0, 0.0, 0.0), "balle", new Color3f(), 0.3f,0.05f));
+		this.add(new AgentBalle(new Vector3d(7.0, 0.0, 0.0), "balle", new Color3f(), 0.3f,0.05f));
 	}
 	
 	private void lireEnvironnement(String cheminFichier) {
