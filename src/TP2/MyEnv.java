@@ -34,21 +34,6 @@ public class MyEnv extends EnvironmentDescription {
 		
 		this.lireEnvironnement("src/TP2/donnees/myenv.txt");
 		
-		// Ajout de murs tout autour du terrain
-		/*Wall w1 = new Wall(new Vector3d(9, 0, 0), 19, 1, this);
-		w1.rotate90(1);
-		this.add(w1);
-		Wall w2 = new Wall(new Vector3d(-9, 0, 0), 19, 2, this);
-		w2.rotate90(1);
-		this.add(w2);
-		Wall w3 = new Wall(new Vector3d(0, 0, 9), 19, 1, this);
-		this.add(w3);
-		Wall w4 = new Wall(new Vector3d(0, 0, -9), 19, 2, this);
-		this.add(w4);
-		Box b1 = new Box(new Vector3d(-6, 0, -3), new Vector3f(1, 1, 1),
-		this);
-		this.add(b1);*/
-		
 		for (BlockWorldObject w : this.envConfig.get(MyEnv.MUR))
 			this.add((Wall) (w));
 		
@@ -81,6 +66,8 @@ public class MyEnv extends EnvironmentDescription {
 				
 				this.lireBloc(decoupage);
 			}
+			
+			sc.close();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}

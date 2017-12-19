@@ -18,6 +18,7 @@ public class MyRobot extends Agent {
 	}
 
 	public void initBehavior() {
+		this.rotateY(Math.PI / 2);
 	}
 
 	public void performBehavior() {

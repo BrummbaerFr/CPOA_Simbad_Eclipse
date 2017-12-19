@@ -2,11 +2,14 @@
 package simbad.gui;
 
 
+import simbad.sim.Agent;
+import simbad.sim.EnvironmentDescription;
+import simbad.sim.Wall;
+
 import javax.vecmath.Vector3d;
-import simbad.sim.*;
 
 /**
- * Test of the batch mode - test Simbatch class.  
+ * Test of the batch mode - test Simbatch class.
  */
 public class TestSimbatch extends EnvironmentDescription {
 
@@ -31,12 +34,16 @@ public class TestSimbatch extends EnvironmentDescription {
 			super(position, name);
 		}
 
-		/** Initialize Agent's Behavior */
+		/**
+		 * Initialize Agent's Behavior
+		 */
 		public void initBehavior() {
-		// nothing particular in this case
+			// nothing particular in this case
 		}
 
-		/** Perform one step of Agent's Behavior */
+		/**
+		 * Perform one step of Agent's Behavior
+		 */
 		public void performBehavior() {
 
 			if (collisionDetected()) {
@@ -46,15 +53,15 @@ public class TestSimbatch extends EnvironmentDescription {
 				setTranslationalVelocity(0.1);
 				setRotationalVelocity(0);
 			}
-		   if (getCounter()% 100000 ==0)
-				System.out.println("Counter "+ getCounter());
+			if (getCounter() % 100000 == 0)
+				System.out.println("Counter " + getCounter());
 		}
 	}
 
 	public static void main(String[] args) {
-		Simbatch sim = new Simbatch(new TestSimbatch(),true);
+		Simbatch sim = new Simbatch(new TestSimbatch(), true);
 		sim.reset();
-		for (int i = 0 ; i < 10000000;i++) {
+		for (int i = 0; i < 10000000; i++) {
 			sim.step();
 		}
 		System.out.println("Done...");

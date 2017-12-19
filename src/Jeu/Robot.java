@@ -1,4 +1,4 @@
-package TP2;
+package Jeu;
 
 import javax.vecmath.Color3f;
 import javax.vecmath.Vector3d;
@@ -8,29 +8,22 @@ import simbad.sim.RangeSensorBelt;
 import simbad.sim.RobotFactory;
 
 import java.awt.*;
+import java.awt.event.KeyListener;
 
-public class MyRobot extends Agent {
+public class Robot extends Agent {
 	private RangeSensorBelt sonars;
 
-	public MyRobot(Vector3d position, String name) {
+	public Robot(Vector3d position, String name) {
 		super(position, name);
 		sonars = RobotFactory.addSonarBeltSensor(this, 8);
 	}
 
 	public void initBehavior() {
-		this.rotateY(Math.PI / 2);
+		this.setTranslationalVelocity(2.0);
 	}
 
 	public void performBehavior() {
-		if ((getCounter() % 20) == 0) {
-			int r = (int)(Math.random() * 255);
-			int g = (int)(Math.random() * 255);
-			int b = (int)(Math.random() * 255);
-
-			this.setColor(new Color3f(new Color(r, g, b)));
-		}
-
-		// avance à 0.5 m/s
+		/*// avance à 0.5 m/s
 		this.setTranslationalVelocity(0.5);
 		// changer l'angle fréquemment
 		if ((getCounter() % 100) == 0)
@@ -50,7 +43,7 @@ public class MyRobot extends Agent {
 		if (this.collisionDetected()) {
 			setTranslationalVelocity(-1.0);
 			setRotationalVelocity(0.5);
-		}
+		}*/
 	}
 
 }

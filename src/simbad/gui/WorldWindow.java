@@ -24,31 +24,31 @@
  */
 package simbad.gui;
 
-import java.awt.BorderLayout;
-import javax.swing.JInternalFrame;
-import javax.swing.JPanel;
 import simbad.sim.World;
+
+import javax.swing.*;
+import java.awt.*;
 
 /**
  * This window is used to visualise the 3D world.
  */
 public final class WorldWindow extends JInternalFrame {
-  
+
 	private static final long serialVersionUID = 1L;
 	World world;
- 
-    public WorldWindow(World world) {
-        super("world");
-        this.world = world;
-        initialize();
-    }
 
-    private void initialize() {
-        JPanel panel = new JPanel();
-        panel.setLayout(new BorderLayout());
-        panel.add("Center",world.getCanvas3D());
-         setContentPane(panel);
-        setSize(400, 400);
-        setResizable(true);
-    }
+	public WorldWindow(World world) {
+		super("world");
+		this.world = world;
+		initialize();
+	}
+
+	private void initialize() {
+		JPanel panel = new JPanel();
+		panel.setLayout(new BorderLayout());
+		panel.add("Center", world.getCanvas3D());
+		setContentPane(panel);
+		setSize(400, 400);
+		setResizable(true);
+	}
 }

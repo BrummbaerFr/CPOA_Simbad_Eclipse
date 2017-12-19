@@ -24,12 +24,11 @@
  */
 package simbad.gui;
 
-import javax.swing.JInternalFrame;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.BoxLayout;
 import simbad.sim.Simulator;
 import simbad.sim.World;
+
+import javax.swing.*;
+
 /*
  * A Container for all the control panels (world, simulator).
  * @author Louis Hugues
@@ -38,18 +37,18 @@ public class ControlWindow extends JInternalFrame {
 
 	private static final long serialVersionUID = 1L;
 
-	public ControlWindow(World world,  Simulator simulator){
-    	    super("Control");
-    	    createGui(world,simulator);
-    	}
-    	
-    	private void createGui(World world,Simulator simulator){
-    	    
-    	    JPanel panel = new JPanel();
-    	    setContentPane(panel);
-    	    panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
-    	    panel.add(new WorldControlGUI(world,simulator));
-       	panel.add(new SimulatorControlGUI((JFrame)getParent(),simulator));
-    	    pack();
-    	}
+	public ControlWindow(World world, Simulator simulator) {
+		super("Control");
+		createGui(world, simulator);
+	}
+
+	private void createGui(World world, Simulator simulator) {
+
+		JPanel panel = new JPanel();
+		setContentPane(panel);
+		panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+		panel.add(new WorldControlGUI(world, simulator));
+		panel.add(new SimulatorControlGUI((JFrame) getParent(), simulator));
+		pack();
+	}
 }

@@ -1,4 +1,4 @@
-package TP2;
+package Jeu;
 
 import javax.vecmath.Color3f;
 import javax.vecmath.Vector3d;
