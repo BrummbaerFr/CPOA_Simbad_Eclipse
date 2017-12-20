@@ -17,6 +17,8 @@ import simbad.sim.Box;
 import simbad.sim.EnvironmentDescription;
 import simbad.sim.Wall;
 
+
+
 public class MyEnv extends EnvironmentDescription {
 	private static final String MUR = "Wall";
 	private static final String ARCHE = "Arch";
@@ -91,7 +93,7 @@ public class MyEnv extends EnvironmentDescription {
 			//BlockWorldObject mur = new Wall(new Vector3d(9.0, 0.0, 0.0), 19, 1, this);
 			if (rotation90)
 				mur.rotate90(1);
-
+			mur.setColor(new Color3f(139f/255f,69f/255f,19f/255f));
 			this.envConfig.get(MyEnv.MUR).add(mur);
 		} else if (bloc[0].equals("B")) {
 			/* Pour les boîtes, on a :
@@ -107,7 +109,7 @@ public class MyEnv extends EnvironmentDescription {
 			BlockWorldObject boite = new Box(vector3d, vector3f, this);
 			if (rotation90)
 				boite.rotate90(1);
-
+				boite.setColor(green);
 			this.envConfig.get(MyEnv.BOITE).add(boite);
 		} else if (bloc[0].equals("A")) {
 			Vector3d vector3d = new Vector3d(Double.parseDouble(bloc[1]), Double.parseDouble(bloc[2]),

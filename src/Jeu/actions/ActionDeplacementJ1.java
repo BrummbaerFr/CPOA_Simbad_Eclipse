@@ -5,7 +5,7 @@ import Jeu.Controleur;
 import javax.swing.*;
 import javax.vecmath.Vector3d;
 import java.awt.event.ActionEvent;
-
+	
 import static Jeu.Controleur.j1;
 
 public class ActionDeplacementJ1 extends AbstractAction {

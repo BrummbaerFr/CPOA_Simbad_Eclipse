@@ -16,16 +16,16 @@ public class ActionDeplacementJ2 extends AbstractAction {
 
 		switch (actionEvent.getActionCommand()) {
 			case "z":
-				j2.translateTo(new Vector3d(0.0, 0.0, -1.0));
+				j2.rotateY(Math.PI);
 				break;
 			case "q":
-				j2.translateTo(new Vector3d(-1.0, 0.0, 0.0));
+				j2.rotateY(Math.PI / 2);
 				break;
 			case "s":
-				j2.translateTo(new Vector3d(0.0, 0.0, 1.0));
+				j2.rotateY(-Math.PI);
 				break;
 			case "d":
-				j2.translateTo(new Vector3d(1.0, 0.0, 0.0));
+				j2.rotateY(-Math.PI / 2);
 				break;
 		}
 

@@ -1,13 +1,15 @@
 package Jeu;
 
+import java.awt.Color;
+
+import javax.swing.JComponent;
+import javax.swing.KeyStroke;
+import javax.vecmath.Color3f;
+
+import Jeu.actions.ActionDeplacementJ1;
+import Jeu.actions.ActionDeplacementJ2;
 import simbad.gui.Simbad;
 import simbad.sim.Agent;
-
-import Jeu.actions.*;
-
-import javax.swing.*;
-import javax.vecmath.Color3f;
-import java.awt.*;
 
 /**
  * Créé par Richard BLONDEL le 14/12/17.
