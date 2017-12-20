@@ -25,6 +25,7 @@
 package simbad.sim;
 
 import javax.vecmath.Vector3f;
+import javax.vecmath.Color3f;
 import javax.vecmath.Vector3d;
 
 
@@ -40,12 +41,12 @@ public class Arch extends BlockWorldCompositeObject {
     void create3D(EnvironmentDescription wd){
         super.create3D();
         // Use 3 boxes to construct the arch.
-        Box b1 = new Box(new Vector3d(-1.5,0,0),new Vector3f(1,1.5f,1),wd);
-        Box b2 = new Box(new Vector3d(1.5,0,0),new Vector3f(1,1.5f,1),wd);
-        Box b3 = new Box(new Vector3d(0,1.5f,0),new Vector3f(4,0.5f,1),wd);
-        b1.setColor(wd.archColor);
-        b2.setColor(wd.archColor);
-        b3.setColor(wd.archColor);
+        Box b1 = new Box(new Vector3d(-1.5,0,0),new Vector3f(0.3f,1.5f,0.2f),wd);
+        Box b2 = new Box(new Vector3d(1.5,0,0),new Vector3f(0.3f,1.5f,0.2f),wd);
+        Box b3 = new Box(new Vector3d(0,1.5f,0),new Vector3f(4,0.3f,0.2f),wd);
+        b1.setColor(new Color3f( 128/256f, 128/256f, 128/256f));
+        b2.setColor(new Color3f( 128/256f, 128/256f, 128/256f));
+        b3.setColor(new Color3f( 128/256f, 128/256f, 128/256f));
         addComponent(b1);
         addComponent(b2);
         addComponent(b3);
