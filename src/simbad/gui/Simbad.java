@@ -31,6 +31,7 @@ import java.util.ArrayList;
 
 import javax.swing.*;
 
+import Jeu.FrameScore;
 import simbad.demo.DemoManager;
 import simbad.sim.Agent;
 import simbad.sim.EnvironmentDescription;
@@ -57,6 +58,7 @@ public class Simbad extends JFrame implements ActionListener {
 	Simulator simulator;
 	Console console = null;
 	AgentInspector agentInspector = null;
+	FrameScore frameScore = null;
 	boolean backgroundMode;
 
 	static Simbad simbadInstance = null;
@@ -120,6 +122,11 @@ public class Simbad extends JFrame implements ActionListener {
 		desktop.add(worldWindow);
 		worldWindow.show();
 		worldWindow.setLocation(300, 20);
+
+		frameScore = new FrameScore();
+		desktop.add(frameScore);
+		frameScore.show();
+		frameScore.setLocation(30, 400);
 
 		agentInspector = createAgentInspector(simulator, 20, 20);
 		if (!backgroundMode) {
@@ -220,6 +227,10 @@ public class Simbad extends JFrame implements ActionListener {
 
 	public JDesktopPane getDesktopPane() {
 		return desktop;
+	}
+
+	public FrameScore getFrameScore() {
+		return this.frameScore;
 	}
 
 	/////////////////////////

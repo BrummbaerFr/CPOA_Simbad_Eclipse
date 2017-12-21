@@ -14,15 +14,19 @@ public class ActionDeplacementJ1 extends AbstractAction {
 	public void actionPerformed(ActionEvent actionEvent) {
 		switch (actionEvent.getActionCommand()) {
 			case "z":
+				j1.setTranslationalVelocity(2.0);
 				j1.rotateY(Math.PI);
 				break;
 			case "q":
+				j1.setTranslationalVelocity(2.0);
 				j1.rotateY(Math.PI / 2);
 				break;
 			case "s":
+				j1.setTranslationalVelocity(2.0);
 				j1.rotateY(-Math.PI);
 				break;
 			case "d":
+				j1.setTranslationalVelocity(2.0);
 				j1.rotateY(-Math.PI / 2);
 				break;
 		}

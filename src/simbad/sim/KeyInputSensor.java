@@ -66,7 +66,7 @@ public class KeyInputSensor extends SensorDevice implements KeyListener{
            
     }
     public void keyTyped(KeyEvent event) {
-        
+
      }
 
 

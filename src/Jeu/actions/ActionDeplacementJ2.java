@@ -12,19 +12,17 @@ public class ActionDeplacementJ2 extends AbstractAction {
 
 	@Override
 	public void actionPerformed(ActionEvent actionEvent) {
-		System.out.println("actionEvent.getActionCommand() = " + actionEvent.getActionCommand());
-
 		switch (actionEvent.getActionCommand()) {
-			case "z":
+			case "o":
 				j2.rotateY(Math.PI);
 				break;
-			case "q":
+			case "k":
 				j2.rotateY(Math.PI / 2);
 				break;
-			case "s":
+			case "l":
 				j2.rotateY(-Math.PI);
 				break;
-			case "d":
+			case "m":
 				j2.rotateY(-Math.PI / 2);
 				break;
 		}

@@ -245,7 +245,7 @@ public  class SimpleAgent extends BaseObject {
         v1.scale(dt);
         angularVelocity.add(v1);
      }
-    /** Perform velocities integration step .¬ */
+    /** Perform velocities integration step .ï¿½ */
     protected void integratesPositionChange(double dt){
        
         
@@ -491,14 +491,21 @@ public  class SimpleAgent extends BaseObject {
      }
     
 	 /**
-	  * Return agents coordinates.
-	 * @return agent point3d .
+	  * Set agents coordinates.
 	 */
 	public void getCoords(Point3d coord){
 	    Vector3d t = v1;
 	    translation.get(t);
 	    coord.set(t.x,t.y,t.z);
 	}
+
+    /**
+     * Correction d'une simbadauberie.
+     * @return the agent's coordinates.
+     */
+	public Vector3d getCoords() {
+	    return this.v1;
+    }
     
     /**
      * Returns the agent counter. Counter is incrementented at each simulation step.
